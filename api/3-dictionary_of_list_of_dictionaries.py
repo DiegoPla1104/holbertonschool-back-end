@@ -13,7 +13,8 @@ if __name__ == '__main__':
     dic2 = {}
     for user in users:
         lis = []
-        todos = requests.get(f"{url}/todos?userId={user['id']}")
+        todos = requests.get(f"https://jsonplaceholder.typicode.com/\
+            todos?userId={user['id']}")
         todos = todos.json()
         for todo in todos:
             dic = {}
